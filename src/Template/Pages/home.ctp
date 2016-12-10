@@ -58,7 +58,7 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
     <?= $this->Html->css('master.css') ?>
 </head>
 <body>
-    <div id="loader" class="loader">
+    <!-- <div id="loader" class="loader">
         <div id="percent" class="percentage">0%</div>
         <div class="panel panel-left">
             <div class="border"></div>
@@ -66,6 +66,148 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
         <div class="panel panel-right">
             <div class="border"></div>
         </div>
+    </div> -->
+    <nav>
+        <div class="menu-icon"></div>
+        <ul>
+            <li class="to-home"><span class="number active">_00</span>.HOME</li>
+            <li class="to-project"><span class="number">_01</span>.WORKS</li>
+            <li class="to-about"><span class="number">_02</span>.ABOUT</li>
+            <li class="to-contact"><span class="number">_03</span>.CONTACT</li>
+        </ul>
+    </nav>
+    <div id="home" class="content first">
+        <div class="border-bellow">
+            <div class="main-title">
+                <h1>
+                    Julien Rousset
+                </h1>
+                <span class="subtitle">Web Dev - Front & Back</span>
+                <svg width="575px" height="196px" id="border-main-title"></svg>
+                <svg version="1.1" id="border" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="575px" height="196.001px"
+                     viewBox="0 0 575 196.001" style="enable-background:new 0 0 575 196.001;" xml:space="preserve">
+                    <g>
+                        <path class="path" fill="none" stroke="#45BFAD" stroke-width="12" stroke-miterlimit="10" d="M199.895,182.877 14.119,182.877
+                            13.333,12.705 10.115,8.342 14.119,5.887 570.594,5.887 570.594,182.877 568.596,186.161 564.897,182.877 368.895,182.877 	"/>
+                        <path class="path" fill="none" stroke="#000000" stroke-width="12" stroke-miterlimit="10" d="M199.895,189.695 7.301,189.695
+                            7.301,12.705 563.776,12.705 563.776,182.877 563.776,189.695 369.895,189.695 	"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="event-alert">
+                Currently looking for an internship of six month (could be anywhere in the world)
+                Back and/or Front Web Developpement (WebGL and Three.js would be the DREAM)
+            </div>
+            <div id="arrow-bottom" class="arrow-bottom">
+                <img src="img/arrow_bottom.png" alt="" />
+            </div>
+        </div>
     </div>
+    <div id="project" class="content">
+        <div class="border-bellow">
+            <div id="arrow-top" class="arrow-top">
+                <img src="img/arrow_top.png" alt="" />
+            </div>
+            <div class="ctn-projects">
+                <div class="ctn-project">
+                    <div class="project">
+                        <img src="img/project/thebarbersgarden.png" alt="" />
+                        <p class="mobile"> - The Barber's Garden - </p>
+                    </div>
+                </div>
+                <div class="ctn-project">
+                    <div class="project">
+                        <img src="img/project/imac.png" alt="" />
+                        <p class="mobile"> - Website of IMAC School - </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="content">
+        <div class="border-bellow">
+            <div class="about">
+                <div class="about-top">
+                    <div class="at-pic mobile">
+                        <img src="img/me.jpg" alt="" />
+                    </div>
+                    <div class="at-content">
+                        <h2>HI, It's me, Julien</h2>
+                        <p>
+                            I’m a 21 yo developper web and if by any chance you’re interested in taking in a trainee for 6 month (April to September 2017) i’ll be pleased if you contact me <br/>
+                            I’ve started my web learning during my first diploma (DUT MMI - Nancy, France) and completed it at IMAC Engeneering School (Paris, France). <br/>
+                        </p>
+                    </div>
+                </div>
+                <div class="about-bottom">
+                    <div class="ab-content">
+                        <h2>Things I know</h2>
+                        <ul class="tag">
+                            <li>Laravel</li>
+                            <li>CakePHP</li>
+                            <li>AngularJS</li>
+                            <li>VueJS</li>
+                            <li>Responsive Design</li>
+                            <li>Object Programming</li>
+                            <li>Git</li>
+                            <li>Agile software development</li>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>InDesign</li>
+                        </ul>
+                    </div>
+                    <div class="ab-content">
+                        <h2>Future Work</h2>
+                        <p>
+                            As it’s the future of web-programming I would like to do an internship working on WebGL (with Three.js and tools like that). Virtual Reality is amazing and this is what i want to do for the years to come
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="content">
+        <div class="border-bellow">
+            <div class="ct-content">
+                <div class="replace-form">
+                    <p><a href="mailto:julien.rousset01@gmail.com">julien.rousset01[at]gmail.com</a></p>
+                    <p><a href="tel:+33608957135">(+33)6.08.95.71.35</p></a>
+                    <p>Paris</p>
+                    <div class="icon_contact">
+                        <a href="https://twitter.com/JulienRst" target="_blank"><img src="img/icon_twitter.png" alt=""></a>
+                        <a href="https://github.com/JulienRst" target="_blank"><img src="img/icon_github.png" alt=""></a>
+                        <a href="https://fr.linkedin.com/in/julien-rousset-75a6a1b4" target="_blank"><img src="img/icon_linkedin.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="inner-map">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBajuFJwFQdA8eYZzPjMVk5B__ywED97vw'></script>
+                    <div style='overflow:hidden;height:100%;width:100%;'>
+                        <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                        <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                    </div>
+                    <script type='text/javascript'>
+                        function init_map(){
+                            var myOptions = {
+                                zoom:12,
+                                center:new google.maps.LatLng(48.856614,2.3522219000000177),
+                                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                disableDefaultUI: true
+                            };
+                            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                        }
+                        google.maps.event.addDomListener(window, 'load', init_map);
+                    </script>
+                    <div class="ctn-border">
+                        <div class="border-bot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/master.js" charset="utf-8"></script>
 </body>
 </html>
