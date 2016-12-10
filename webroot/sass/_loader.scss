@@ -1,0 +1,79 @@
+.loader {
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .percentage {
+        position: relative;
+        text-align: center;
+        opacity: 1;
+        color: $blue;
+        font-family: "Arial";
+        font-size: 0.8rem;
+        transition: 1s;
+
+        &.faded {
+            opacity: 0;
+            transition: 1s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            z-index: -1;
+            width: 4rem;
+            height: 4rem;
+            top: calc(50%);
+            left: calc(50%);
+            transform: translate(-50%,-50%) rotate(45deg);
+            border: 3px solid $blue;
+            outline: 3px solid white;
+        }
+    }
+
+    .panel {
+        position: absolute;
+        z-index: -2;
+        height: 100vh;
+        background-color: white;
+        width: 50vw;
+
+        .border {
+            top: 50%;
+            height: 0;
+            background-color: $blue;
+            width: 5px;
+            position: absolute;
+            transition: 0s;
+        }
+
+        &.panel-left {
+            left: 0;
+            .border {
+                left: calc(50vw - 5px);
+            }
+
+            &.disband {
+                left: -50vw;
+                transition: 1s;
+            }
+        }
+
+        &.panel-right {
+            right: 0;
+            .border {
+                right: calc(50vw - 5px);
+            }
+
+            &.disband {
+                right: -50vw;
+                transition: 1s;
+            }
+        }
+    }
+}
