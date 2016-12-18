@@ -14,7 +14,7 @@ function handleComplete() {
     setTimeout(function () {
         var loader = document.getElementById('loader');
         loader.parentNode.removeChild(loader);
-    }, 2000);
+    }, 1000);
 }
 
 function handleFileLoad() {
@@ -72,6 +72,11 @@ queue.on("complete", handleComplete, this);
 
 for (i in listOfFileToAdd) {
     if (listOfFileToAdd.hasOwnProperty(i)) {
-        queue.loadFile(listOfFileToAdd[i]);
+        if (document.location.href.indexOf("projects") !== -1) {
+            queue.loadFile("../" + listOfFileToAdd[i]);
+        } else {
+            queue.loadFile(listOfFileToAdd[i]);
+        }
+
     }
 }

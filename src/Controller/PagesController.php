@@ -67,4 +67,13 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    public function home(){
+        $this->loadModel("Projects");
+
+        $projects = $this->Projects->find('all');
+
+        $this->set('projects', $projects);
+        $this->set('_serialize', ['projects']);
+    }
 }

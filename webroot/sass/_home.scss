@@ -165,13 +165,8 @@ nav {
                 z-index: -1;
                 top: -2rem;
                 left: -2rem;
-                display: none;
                 width: calc(100% + 4rem);
                 height: calc(100% + 4rem);
-            }
-
-            svg.active {
-                display: block;
             }
 
             .ctn-before-border {
@@ -218,6 +213,27 @@ nav {
             max-width: 600px;
             text-align: center;
             font-size: 1.2rem;
+        }
+
+        .ctn-resume {
+            margin-top: 2rem;
+            background: $blue;
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                font-size: 2rem;
+                font-family: $title;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 2rem;
+                    margin-right: 1rem;
+                }
+            }
         }
     }
 }
@@ -272,8 +288,8 @@ button {
 
 @media (max-width : 760px) {
     body {
-        overflow: scroll;
-        overflow-x: hidden;
+        // overflow: scroll;
+        // overflow-x: hidden;
     }
     .content {
         .border-bellow {

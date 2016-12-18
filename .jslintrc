@@ -18,12 +18,9 @@
     "passfail": false,
     "plusplus": false,
     "predef": [
-        "$",
-        "TchatJS",
-        "createjs",
+        "TweenLite",
         "Navigation",
-        "Portfolio",
-        "IScroll"
+        "Portfolio"
     ],
     "regexp": false,
     "rhino": false,

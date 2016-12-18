@@ -42,23 +42,23 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
     <meta property="og:image" content="http://julien-rousset.fr/img/share.jpg"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-57x57.png', ['sizes' => '57x57','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-60x60.png', ['sizes' => '60x60','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-72x72.png', ['sizes' => '72x72','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-76x76.png', ['sizes' => '76x76','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-114x144.png', ['sizes' => '114x144','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-120x120.png', ['sizes' => '120x120','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-144x144.png', ['sizes' => '144x144','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-152x152.png', ['sizes' => '152x152','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-180x180.png', ['sizes' => '180x180','type' => 'icon']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-144x144.png', ['sizes' => '144x144', 'type' => 'image/png']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-96x96.png', ['sizes' => '96x96', 'type' => 'image/png']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-48x48.png', ['sizes' => '48x48', 'type' => 'image/png']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-36x36.png', ['sizes' => '36x36', 'type' => 'image/png']); ?>
     <?= $this->Html->css('master.css') ?>
 </head>
 <body>
-    <!-- <div id="loader" class="loader">
+    <div id="loader" class="loader">
         <div id="percent" class="percentage">0%</div>
         <div class="panel panel-left">
             <div class="border"></div>
@@ -66,7 +66,7 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
         <div class="panel panel-right">
             <div class="border"></div>
         </div>
-    </div> -->
+    </div>
     <nav>
         <div class="menu-icon"></div>
         <ul>
@@ -87,17 +87,20 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                 <svg version="1.1" id="border" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="575px" height="196.001px"
                      viewBox="0 0 575 196.001" style="enable-background:new 0 0 575 196.001;" xml:space="preserve">
-                    <g>
-                        <path class="path" fill="none" stroke="#45BFAD" stroke-width="12" stroke-miterlimit="10" d="M199.895,182.877 14.119,182.877
-                            13.333,12.705 10.115,8.342 14.119,5.887 570.594,5.887 570.594,182.877 568.596,186.161 564.897,182.877 368.895,182.877 	"/>
-                        <path class="path" fill="none" stroke="#000000" stroke-width="12" stroke-miterlimit="10" d="M199.895,189.695 7.301,189.695
-                            7.301,12.705 563.776,12.705 563.776,182.877 563.776,189.695 369.895,189.695 	"/>
-                    </g>
+                    <path id="path1" class="path" fill="none" stroke="#45BFAD" stroke-width="12" stroke-miterlimit="10" d="M199.895,182.877 14.119,182.877
+                        13.333,12.705 10.115,8.342 14.119,5.887 570.594,5.887 570.594,182.877 568.596,186.161 564.897,182.877 368.895,182.877 	"/>
+                    <path id="path2" class="path" fill="none" stroke="#000000" stroke-width="12" stroke-miterlimit="10" d="M199.895,189.695 7.301,189.695
+                        7.301,12.705 563.776,12.705 563.776,182.877 563.776,189.695 369.895,189.695 	"/>
                 </svg>
             </div>
             <div class="event-alert">
                 Currently looking for an internship of six month (could be anywhere in the world)
                 Back and/or Front Web Developpement (WebGL and Three.js would be the DREAM)
+            </div>
+            <div class="ctn-resume">
+                <?= $this->Html->link($this->Html->image("download.png").' Resume',
+                "/documents/CV_JULIEN_ROUSSET.pdf",['escape' => false, 'target' => '_blank']);
+                ?>
             </div>
             <div id="arrow-bottom" class="arrow-bottom">
                 <img src="img/arrow_bottom.png" alt="" />
@@ -110,34 +113,38 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                 <img src="img/arrow_top.png" alt="" />
             </div>
             <div class="ctn-projects">
-                <div class="ctn-project">
-                    <div class="project">
-                        <img src="img/project/thebarbersgarden.png" alt="" />
-                        <p class="mobile"> - The Barber's Garden - </p>
+                <?php foreach($projects as $project) { ?>
+                    <div class="ctn-project">
+                        <div class="project">
+                            <?= $this->Html->link($this->Html->image('project/'.$project['img_min']),
+                            ['controller' => 'Projects', 'action' => 'view',$project['slug']],['escape' => false]); ?>
+                            <p class="mobile"> - <?= $project['title'] ?> - </p>
+                        </div>
                     </div>
-                </div>
-                <div class="ctn-project">
-                    <div class="project">
-                        <img src="img/project/imac.png" alt="" />
-                        <p class="mobile"> - Website of IMAC School - </p>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
     <div id="about" class="content">
         <div class="border-bellow">
+            <div class="at-pic mobile">
+                <img src="img/me.jpg" alt="" />
+            </div>
             <div class="about">
                 <div class="about-top">
-                    <div class="at-pic mobile">
-                        <img src="img/me.jpg" alt="" />
-                    </div>
                     <div class="at-content">
-                        <h2>HI, It's me, Julien</h2>
+                        <h2>Hi, It's me, Julien</h2>
                         <p>
                             I’m a 21 yo developper web and if by any chance you’re interested in taking in a trainee for 6 month (April to September 2017) i’ll be pleased if you contact me <br/>
                             I’ve started my web learning during my first diploma (DUT MMI - Nancy, France) and completed it at IMAC Engeneering School (Paris, France). <br/>
                         </p>
+                    </div>
+                    <div class="at-content image">
+                        <?= $this->Html->image('/img/about/tennis.png'); ?>
+                        <?= $this->Html->image('/img/about/pizza.png'); ?>
+                        <?= $this->Html->image('/img/about/beer.png'); ?>
+                        <?= $this->Html->image('/img/about/guitar.png'); ?>
+                        <?= $this->Html->image('/img/about/gameboy.png'); ?>
                     </div>
                 </div>
                 <div class="about-bottom">
@@ -207,7 +214,6 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
             </div>
         </div>
     </div>
-
-    <script src="js/master.js" charset="utf-8"></script>
+    <?= $this->Html->script("master"); ?>
 </body>
 </html>

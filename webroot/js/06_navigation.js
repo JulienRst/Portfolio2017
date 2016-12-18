@@ -42,16 +42,15 @@ function Navigation() {
         me.currentPage = [0, 0];
         me.animate = false;
         me.mobile = (window.innerHeight < 760) ? true : false;
-        // --- Initialisation of Scroll --- //
-        // $(document).on('mousewheel', function (event) {
-        //     if (!me.animate && !me.mobile) {
-        //         if (event.deltaY > 0) {
-        //             me.changePage(me.currentPage[0] - 1, true);
-        //         } else {
-        //             me.changePage(me.currentPage[0] + 1, true);
-        //         }
-        //     }
-        // });
+
+        // --- Initialisation of selector --- //
+
+        me.nav = document.querySelector('nav');
+
+        //Place current active on nav
+        me.currentPage[0] = Math.round(window.scrollY / window.innerHeight);
+        document.querySelector('span.active').classList.remove('active');
+        document.querySelector('li.' + me.arraySearch(me.pages, me.currentPage[0]) + ' span').classList.add('active');
     };
 
     /*
@@ -61,77 +60,47 @@ function Navigation() {
     */
 
     this.changePage = function (idPage, value) {
-        console.log("change page : " + idPage + " value : " + value);
         value = value || false;
         if (value !== false) { idPage = me.arraySearch(me.pages, idPage); }
         if (me.pages[idPage] !== undefined) {
             me.animate = true;
-            $("nav").addClass("hide");
-            $("body").removeClass("modal-open");
-            $("nav li span.active").removeClass("active");
-            $("nav li." + idPage + " span").addClass("active");
+            me.nav.classList.add('hide');
+            document.querySelector('nav li span.active').classList.remove('active');
+            document.querySelector('nav li.' + idPage + ' span').classList.add('active');
             var valueTop = me.pages[idPage] * window.innerHeight;
-            $('html,body').animate({
-                scrollTop : valueTop,
-                scrollLeft : 0
-            }, 500, function () {
-                me.animate = false;
-                if (me.mobile) {
-                    $("body").removeClass("modal-open");
-                    $("nav.active").removeClass("active");
-                    me.activateMenuMobileOpen();
+            TweenLite.to(window, 0.5, {
+                scrollTo: valueTop,
+                onComplete: function () {
+                    me.animate = false;
+                    if (me.mobile && me.nav.classList.contains('active')) {
+                        document.querySelector('nav.active').classList.remove("active");
+                        me.activateMenuMobileOpen();
+                    }
+                    me.nav.classList.remove('hide');
                 }
-                $("nav").removeClass("hide");
             });
             me.currentPage[0] = me.pages[idPage];
             me.currentPage[1] = 0;
         }
     };
 
-    this.changeProject = function (idProject) {
-        $("nav").addClass("hide");
-        me.animate = true;
-        $('html,body').animate({
-            scrollTop : window.innerHeight,
-            scrollLeft : idProject * window.innerWidth
-        }, 500, function () {
-            me.animate = false;
-            $("nav").removeClass("hide");
-        });
-        $("body").addClass("modal-open");
-        me.currentPage[0] = 1;
-        me.currentPage[1] = idProject;
-    };
-
-    this.returnProject = function () {
-        $("nav").addClass("hide");
-        $("body").removeClass("modal-open");
-        me.animate = true;
-        $('html , body').animate({
-            scrollLeft : 0
-        }, 500, function () {
-            me.animate = false;
-            $("nav").removeClass("hide");
-        });
-        me.currentPage[0] = 1;
-        me.currentPage[1] = 0;
+    this.innerActivateMenuMobileOpen = function () {
+        me.nav.classList.add("active");
+        me.activateMenuMobileClose();
     };
 
     this.activateMenuMobileOpen = function () {
-        $('.menu-icon').unbind("click");
-        $('nav:not(active) .menu-icon').click(function () {
-            $("body").addClass("modal-open");
-            $(this).parent().addClass("active");
-            me.activateMenuMobileClose();
-        });
+        document.querySelector('.menu-icon').removeEventListener('click', me.innerActivateMenuMobileClose);
+        document.querySelector('.menu-icon').addEventListener('click', me.innerActivateMenuMobileOpen);
+    };
+
+    this.innerActivateMenuMobileClose = function () {
+        me.nav.classList.remove("active");
+        me.activateMenuMobileOpen();
     };
 
     this.activateMenuMobileClose = function () {
-        $('.menu-icon').unbind("click");
-        $('nav .menu-icon').click(function () {
-            $("body").removeClass("modal-open");
-            $(this).parent().removeClass("active");
-            me.activateMenuMobileOpen();
-        });
+        document.querySelector('.menu-icon').removeEventListener('click', me.innerActivateMenuMobileOpen);
+        document.querySelector('.menu-icon').addEventListener('click', me.innerActivateMenuMobileClose);
     };
 }

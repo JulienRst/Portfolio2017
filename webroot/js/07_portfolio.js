@@ -23,14 +23,14 @@ function Portfolio() {
     };
 
     this.start = function () {
-        var i, j, l, menuItem, miniaProject, path, length;
-        window.scrollTo(0, 0);
+        var i, menuItem, path;
 
         // Transition between HOME AND PROJECT
-        $("#arrow-bottom").on("click", function () {
+        document.getElementById('arrow-bottom').addEventListener('click', function () {
             me.navigation.changePage("to-project");
         });
-        $("#arrow-top").on("click", function () {
+
+        document.getElementById('arrow-top').addEventListener('click', function () {
             me.navigation.changePage("to-home");
         });
 
@@ -43,27 +43,16 @@ function Portfolio() {
         // ACTIVATION MENU :: MOBILE
         me.navigation.activateMenuMobileOpen();
 
-
-        //ACTIVATION PROJECT ::
-            //Active miniature project -> big project
-        miniaProject = document.getElementsByClassName("project");
-        for (j = 0; j < miniaProject.length; j += 1) {
-            me.activateProjectLoop(j, miniaProject);
-        }
-
-        $(".arrow_left").click(function () {me.navigation.returnProject(); });
-
         // SVG //
-        path = $('.path');
-        for (l = 0; l < path.length; l += 1) {
-            length = path[l].getTotalLength();
-            $(path[l]).css('stroke-dashoffset', length);
-            $(path[l]).css('stroke-dasharray', length);
-        }
+        console.log("Excute");
+        path = document.querySelectorAll('.path');
 
-        $('svg').addClass('active');
-        $('.path').animate({
-            "stroke-dashoffset" : 0
-        }, 2000);
+        path[0].style.strokeDashoffset = path[0].getTotalLength();
+        path[1].style.strokeDashoffset = path[1].getTotalLength();
+        path[0].style.strokeDasharray = path[0].getTotalLength();
+        path[1].style.strokeDasharray = path[1].getTotalLength();
+
+        path[0].style.animation = "dash 2s linear forwards";
+        path[1].style.animation = "dash 2s linear forwards";
     };
 }
