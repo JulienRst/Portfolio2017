@@ -1,9 +1,36 @@
 $title : "BebasNeue";
 $subtitle : "OpenSansLightItalic";
 $body : "OpenSans";
+$bodybold : "OpenSans-Bold";
 $off : "BebasNeueLight";
 $blue : #45BFAD;
 
 body {
     overflow: hidden;
+}
+.text {
+    .bold {
+        font-family: $bodybold;
+    }
+
+    a {
+        color: $blue;
+        transition: 0.5s;
+        font-family: $bodybold;
+        &:hover {
+            color: grey;
+            transition: 0.5s;
+        }
+    }
+
+    .like-link {
+        color: $blue;
+        transition: 0.5s;
+        font-family: $bodybold;
+        cursor: pointer;
+        &:hover {
+            color: grey;
+            transition: 0.5s;
+        }
+    }
 }

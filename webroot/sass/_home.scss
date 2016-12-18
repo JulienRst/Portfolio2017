@@ -34,7 +34,7 @@ nav {
     }
 }
 
-@media (max-width : 720px) {
+@media (max-width : 760px) {
     nav {
         position: fixed;
         transform: none;
@@ -209,7 +209,7 @@ nav {
         flex-direction: column;
         .event-alert {
             margin-top: 5rem;
-            font-family: $title;
+            font-family: $body;
             max-width: 600px;
             text-align: center;
             font-size: 1.2rem;

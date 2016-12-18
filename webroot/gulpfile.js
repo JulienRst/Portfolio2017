@@ -28,7 +28,7 @@ gulp.task('concat', function(){
 });
 
 gulp.task('concat:watch', function(){
-    gulp.watch('./js/**/*.js',['concat','compress']);
+    gulp.watch('./js/**/*.js',['concat']);
 });
 
 gulp.task('compress', function (cb) {

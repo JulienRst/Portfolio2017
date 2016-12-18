@@ -18,6 +18,7 @@
     "passfail": false,
     "plusplus": false,
     "predef": [
+        "createjs",
         "TweenLite",
         "Navigation",
         "Portfolio"

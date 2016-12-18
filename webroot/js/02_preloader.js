@@ -8,9 +8,13 @@ function handleComplete() {
     panels[0].classList.add('disband');
     panels[1].classList.add('disband');
     percent.classList.add('faded');
-    var app = new Portfolio();
-    app.init();
-    app.start();
+
+    if (document.location.href.indexOf("projects") === -1) {
+        var app = new Portfolio();
+        app.init();
+        app.start();
+    }
+
     setTimeout(function () {
         var loader = document.getElementById('loader');
         loader.parentNode.removeChild(loader);

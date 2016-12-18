@@ -34,6 +34,11 @@ function Portfolio() {
             me.navigation.changePage("to-home");
         });
 
+        //To contact
+        document.getElementById('to-contact').addEventListener('click', function () {
+            me.navigation.changePage('to-contact');
+        });
+
         // ACTIVATION MENU ::
         menuItem = document.getElementsByTagName("li");
         for (i = 0; i < menuItem.length; i += 1) {

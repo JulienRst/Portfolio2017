@@ -42,19 +42,19 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-60x60.png', ['sizes' => '60x60','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-72x72.png', ['sizes' => '72x72','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-76x76.png', ['sizes' => '76x76','type' => 'icon']); ?>
-    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-114x144.png', ['sizes' => '114x144','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-114x114.png', ['sizes' => '114x114','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-120x120.png', ['sizes' => '120x120','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-144x144.png', ['sizes' => '144x144','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-152x152.png', ['sizes' => '152x152','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-180x180.png', ['sizes' => '180x180','type' => 'icon']); ?>
-    <?= $this->Html->meta('icon','img/favicon/android-icon-192x192.png', ['sizes' => '192x192', 'type' => 'image/png']); ?>
-    <?= $this->Html->meta('icon','img/favicon/android-icon-32x32.png', ['sizes' => '32x32', 'type' => 'image/png']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-144x144.png', ['sizes' => '144x144', 'type' => 'image/png']); ?>
     <?= $this->Html->meta('icon','img/favicon/android-icon-96x96.png', ['sizes' => '96x96', 'type' => 'image/png']); ?>
-    <?= $this->Html->meta('icon','img/favicon/android-icon-16x16.png', ['sizes' => '16x16', 'type' => 'image/png']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-48x48.png', ['sizes' => '48x48', 'type' => 'image/png']); ?>
+    <?= $this->Html->meta('icon','img/favicon/android-icon-36x36.png', ['sizes' => '36x36', 'type' => 'image/png']); ?>
     <?= $this->Html->css('master.css') ?>
 </head>
 <body>
-    <!-- <div id="loader" class="loader">
+    <div id="loader" class="loader">
         <div id="percent" class="percentage">0%</div>
         <div class="panel panel-left">
             <div class="border"></div>
@@ -62,7 +62,7 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
         <div class="panel panel-right">
             <div class="border"></div>
         </div>
-    </div> -->
+    </div>
 
     <div class="view-project content">
         <div class="border-bellow">
@@ -72,12 +72,17 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                 ?>
             </div>
             <div class="vp-content">
-                <h2><?= $project["title"] ?></h2>
+                <div class="top-content">
+                    <h2><?= $project["title"] ?></h2>
+                    <div class="go-to-project">
+                        <a target="_blank" href="http://julien-rousset.fr/thebarbersgarden/"><button>SEE PROJECT</button></a>
+                    </div>
+                </div>
                 <div class="subtitle"><?= $project["desc_min"] ?></div>
                 <div class="techno"><?= $project["desc_main"] ?></div>
                 <?php foreach ($project["contents"] as $content) {
                     if ($content["type"] === "text") {
-                        echo "<p>".$content["content"]."</p>";
+                        echo "<p class='text'>".$content["content"]."</p>";
                     } else if ($content["type"] === "img") {
                         echo $this->Html->image('project/'.$content["content"], [
                             "class" => "img-devices"
@@ -97,7 +102,6 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                             ?>
                         </div>
                     </div>
-                    <div class="go-to-project"></div>
                 </div>
             </div>
             <div class="vp-img">

@@ -46,7 +46,7 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-60x60.png', ['sizes' => '60x60','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-72x72.png', ['sizes' => '72x72','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-76x76.png', ['sizes' => '76x76','type' => 'icon']); ?>
-    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-114x144.png', ['sizes' => '114x144','type' => 'icon']); ?>
+    <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-114x114.png', ['sizes' => '114x114','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-120x120.png', ['sizes' => '120x120','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-144x144.png', ['sizes' => '144x144','type' => 'icon']); ?>
     <?= $this->Html->meta('apple-touch-icon','img/favicon/apple-icon-152x152.png', ['sizes' => '152x152','type' => 'icon']); ?>
@@ -90,12 +90,12 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                     <path id="path1" class="path" fill="none" stroke="#45BFAD" stroke-width="12" stroke-miterlimit="10" d="M199.895,182.877 14.119,182.877
                         13.333,12.705 10.115,8.342 14.119,5.887 570.594,5.887 570.594,182.877 568.596,186.161 564.897,182.877 368.895,182.877 	"/>
                     <path id="path2" class="path" fill="none" stroke="#000000" stroke-width="12" stroke-miterlimit="10" d="M199.895,189.695 7.301,189.695
-                        7.301,12.705 563.776,12.705 563.776,182.877 563.776,189.695 369.895,189.695 	"/>
+                        7.301,12.705 563.776,12.705 563.776,182.877 563.776,189.695 369.895,189.695"/>
                 </svg>
             </div>
-            <div class="event-alert">
-                Currently looking for an internship of six month (could be anywhere in the world)
-                Back and/or Front Web Developpement (WebGL and Three.js would be the DREAM)
+            <div class="event-alert text">
+                Currently looking for an <span class="bold">internship of six month</span> (could be anywhere in the world)
+                Back and/or Front Web Developpement (<span class="bold">WebGL</span> and <span class="bold">Three.js</span> would be the DREAM)
             </div>
             <div class="ctn-resume">
                 <?= $this->Html->link($this->Html->image("download.png").' Resume',
@@ -134,9 +134,9 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                 <div class="about-top">
                     <div class="at-content">
                         <h2>Hi, It's me, Julien</h2>
-                        <p>
-                            I’m a 21 yo developper web and if by any chance you’re interested in taking in a trainee for 6 month (April to September 2017) i’ll be pleased if you contact me <br/>
-                            I’ve started my web learning during my first diploma (DUT MMI - Nancy, France) and completed it at IMAC Engeneering School (Paris, France). <br/>
+                        <p class="text">
+                            I’m a 21 yo <span class="bold">web developper</span> and if by any chance you’re interested in taking in a <span class="bold">trainee for 6 month</span> (April to September 2017) i’ll be pleased if you <span id="to-contact" class="like-link">contact me</span> <br/>
+                            I’ve started my web learning during my first diploma (DUT MMI - Nancy, France) and improved it at <a href="http://ingenieur-imac.fr/" target="_blank" alt="imac school">IMAC Engeneering School</a> (Paris, France). <br/>
                         </p>
                     </div>
                     <div class="at-content image">
@@ -166,8 +166,8 @@ $cakeDescription = 'Julien Rousset - Web Dev Back & Front';
                     </div>
                     <div class="ab-content">
                         <h2>Future Work</h2>
-                        <p>
-                            As it’s the future of web-programming I would like to do an internship working on WebGL (with Three.js and tools like that). Virtual Reality is amazing and this is what i want to do for the years to come
+                        <p class="text">
+                            As it’s the future of web-programming I would like to do an internship working on <span class="bold">WebGL</span> (with Three.js and tools like that). <span class="bold">Virtual Reality</span> is amazing and this is what i want to do for the years to come
                         </p>
                     </div>
                 </div>
