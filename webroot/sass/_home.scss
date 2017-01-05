@@ -291,7 +291,7 @@ button {
         // overflow: scroll;
         // overflow-x: hidden;
     }
-    .content {
+    #home.content {
         .border-bellow {
             padding: 1rem;
             .main-title {
@@ -337,11 +337,38 @@ button {
                 }
             }
 
+            .event-alert {
+                margin-top: 3rem;
+                font-size: 1rem;
+            }
+
             .arrow-bottom {
                 img {
                     width: 3rem;
                     height: 3rem;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width : 350px) {
+    #home.content {
+        .border-bellow {
+            .main-title {
+
+            }
+
+            .event-alert {
+
+            }
+
+            .ctn-resume {
+
+            }
+
+            .arrow-bottom {
+
             }
         }
     }

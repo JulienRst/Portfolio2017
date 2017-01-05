@@ -2320,6 +2320,7 @@ function Navigation() {
     */
 
     this.changePage = function (idPage, value) {
+        console.log(idPage + " " + value);
         value = value || false;
         if (value !== false) { idPage = me.arraySearch(me.pages, idPage); }
         if (me.pages[idPage] !== undefined) {
