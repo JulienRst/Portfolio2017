@@ -194,7 +194,9 @@ nav {
             position: absolute;
             bottom: 10%;
             animation: arrowbottom 1.5s infinite;
-
+            right: 0;
+            left: 0;
+            text-align: center;
             img {
                 width: 4rem;
                 height: 4rem;

@@ -5,6 +5,9 @@
         position: absolute;
         top: 10%;
         animation: arrowtop 1.5s infinite;
+        right: 0;
+        left: 0;
+        text-align: center;
 
         img {
             width: 4rem;
@@ -127,6 +130,7 @@
         padding: 1rem 0;
         font-family: $title;
         display: flex;
+        top: 0;
         flex-direction: column;
 
         .top-content {
